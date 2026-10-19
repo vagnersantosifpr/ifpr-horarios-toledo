@@ -1,0 +1,186 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+/* ── Hero Banner (Revolutionary) ──────────── */
+.heroBanner {
+  padding: 8rem 0 10rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: none;
+}
+
+[data-theme="dark"] .heroBanner {
+  background-color: #1b1d1f;
+}
+
+/* ── Mesh Canvas & Blobs ─────────────────── */
+.heroCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  filter: blur(80px); /* Deep blur for mesh effect */
+  opacity: 0.8;
+}
+
+.meshBlob {
+  position: absolute;
+  border-radius: 50%;
+  animation: meshMove 20s infinite alternate ease-in-out;
+}
+
+.meshBlob:nth-child(1) {
+  top: -10%;
+  left: -10%;
+  width: 60%;
+  height: 60%;
+  background: var(--ifpr-mesh-1);
+  animation-duration: 25s;
+}
+
+.meshBlob:nth-child(2) {
+  bottom: -10%;
+  right: -10%;
+  width: 50%;
+  height: 50%;
+  background: var(--ifpr-mesh-2);
+  animation-duration: 22s;
+  animation-delay: -5s;
+}
+
+.meshBlob:nth-child(3) {
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+  background: var(--ifpr-mesh-3);
+  animation-duration: 18s;
+  animation-delay: -2s;
+}
+
+/* ── Hero Content ─────────────────────────── */
+.heroContainer {
+  position: relative;
+  z-index: 10;
+}
+
+.heroContent {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.heroBanner :global(.hero__title) {
+  font-weight: 800;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  animation: fadeInPremium 0.8s ease-out both;
+}
+
+[data-theme="dark"] .heroBanner :global(.hero__title) {
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(50, 171, 76, 0.1);
+}
+
+.heroBanner :global(.hero__subtitle) {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInPremium 0.8s ease-out 0.2s both;
+}
+
+[data-theme="dark"] .heroBanner :global(.hero__subtitle) {
+  color: #9ca3af;
+}
+
+/* ── Wave Divider ─────────────────────────── */
+.waveDivider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: 5;
+}
+
+.waveDivider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.2px);
+  height: 80px;
+}
+
+/* This color should match the section below it */
+.waveDivider path {
+  fill: #ffffff;
+}
+
+[data-theme="dark"] .waveDivider path {
+  fill: #1b1d1f;
+}
+
+/* ── Announcement / CTA Area ──────────────── */
+.announcement {
+  position: relative;
+  padding: 4rem 1.5rem;
+  background-color: #ffffff;
+  z-index: 15;
+  margin-top: -1px; /* Avoid seams */
+}
+
+[data-theme="dark"] .announcement {
+  background-color: #1b1d1f;
+}
+
+.announcementInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* ── Responsive ───────────────────────────── */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 6rem 1.5rem 8rem;
+  }
+  .heroBanner :global(.hero__title) {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+  }
+  .heroBanner :global(.hero__subtitle) {
+    font-size: 1.1rem;
+  }
+  .waveDivider svg {
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heroBanner {
+    padding: 5rem 1rem 6rem;
+  }
+  .heroBanner :global(.hero__title) {
+    font-size: 2rem;
+  }
+}

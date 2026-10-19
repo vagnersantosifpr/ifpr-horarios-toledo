@@ -1,0 +1,208 @@
+---
+slug: /turma/elm2025
+---
+import { Grid } from "@site/src/components/Grid";
+import BrowserOnly from "@docusaurus/BrowserOnly";
+
+export const data = {
+  "title": "ELM2025",
+  "base": "ELM",
+  "weekClasses": [
+    {
+      "dayName": "Segunda-Feira",
+      "dayClasses": [
+        {
+          "subject": "Tecnologia dos Materiais - 343",
+          "size": 2,
+          "teachers": [
+            "Sérgio Takahashi"
+          ],
+          "classroom": "sala_14-2",
+          "students": [
+            "ELM2025"
+          ],
+          "time": "19:00 - 19:50",
+          "color": ""
+        }
+        ,
+        {
+          "subject": "Processos de Fabricação II - 344",
+          "size": 2,
+          "teachers": [
+            "Fábio Fernandes da Silva"
+          ],
+          "classroom": "laboratorio_de_usinagem_b4",
+          "students": [
+            "ELM2025"
+          ],
+          "time": "21:00 - 21:50",
+          "color": ""
+        }
+
+      ]
+    },
+    {
+      "dayName": "Terça-Feira",
+      "dayClasses": [
+        {
+          "subject": "Análise de Circuitos - 341",
+          "size": 4,
+          "teachers": [
+            "Alex Miyamoto Mussi"
+          ],
+          "classroom": "laboratorio_de_eletricidade_e_eletronica_b4",
+          "students": [
+            "ELM2025"
+          ],
+          "time": "19:00 - 19:50",
+          "color": ""
+        }
+        
+      ]
+    },
+    {
+      "dayName": "Quarta-Feira",
+      "dayClasses": [
+        {
+          "subject": "Eletrônica Analógica - 339",
+          "size": 4,
+          "teachers": [
+            "Juliano da Rocha Queiroz"
+          ],
+          "classroom": "laboratorio_de_eletricidade_e_eletronica_b4",
+          "students": [
+            "ELM2025"
+          ],
+          "time": "19:00 - 19:50",
+          "color": ""
+        }
+      ]
+    },
+    {
+      "dayName": "Quinta-Feira",
+      "dayClasses": [
+        {
+          "subject": "Desenho Assistido por computador - 340",
+          "size": 2,
+          "teachers": [
+            "Sérgio Takahashi"
+          ],
+          "classroom": "laboratorio_de_computacao_aplicada",
+          "students": [
+            "ELM2025"
+          ],
+          "time": "19:00 - 19:50",
+          "color": ""
+        }
+        ,
+        {
+          "subject": "Tecnologia dos Materiais - 343",
+          "size": 2,
+          "teachers": [
+            "Sérgio Takahashi"
+          ],
+          "classroom": "sala_14-2",
+          "students": [
+            "ELM2025"
+          ],
+          "time": "21:00 - 21:50",
+          "color": ""
+        }
+        
+      ]
+    },
+    {
+      "dayName": "Sexta-Feira",
+      "dayClasses": [
+        {
+          "subject": "Sistemas Digitais - 342",
+          "size": 4,
+          "teachers": [
+            "Jair Fajardo Junior",
+            "Mario Eduardo de Barros Gomes Nunes da Silva"
+          ],
+          "classroom": "sala_14-2",
+          "students": [
+            "ELM2025"
+          ],
+          "time": "19:00 - 19:50",
+          "color": ""
+        }
+      ]
+    }
+  ],
+  "time": [
+    {
+      "time": "07:30 - 08:20",
+      "size": 50
+    },
+    {
+      "time": "08:20 - 09:10",
+      "size": 50
+    },
+    {
+      "time": "09:25 - 10:15",
+      "size": 50
+    },
+    {
+      "time": "10:15 - 11:05",
+      "size": 50
+    },
+    {
+      "time": "11:05 - 11:55",
+      "size": 50
+    },
+    {
+      "time": "13:10 - 14:00",
+      "size": 50
+    },
+    {
+      "time": "14:00 - 14:50",
+      "size": 50
+    },
+    {
+      "time": "15:05 - 15:55",
+      "size": 50
+    },
+    {
+      "time": "15:55 - 16:45",
+      "size": 50
+    },
+    {
+      "time": "16:45 - 17:35",
+      "size": 50
+    },
+    {
+      "time": "19:00 - 19:50",
+      "size": 50
+    },
+    {
+      "time": "19:50 - 20:40",
+      "size": 50
+    },
+    {
+      "time": "21:00 - 21:50",
+      "size": 50
+    },
+    {
+      "time": "21:50 - 22:40",
+      "size": 50
+    }
+  ]
+}
+
+# ELM2025
+
+<div>
+  {
+    <BrowserOnly>
+      {() => (
+        <Grid
+          title={data.title}
+          weekClasses={data.weekClasses}
+          time={data.time}
+        />
+      )}
+    </BrowserOnly>
+  }
+</div>

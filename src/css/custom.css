@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+html {
+  height: auto !important;
+}
+
+/* ── Light Theme Variables ────────────────── */
+:root {
+  /* Docusaurus primary color scale (IFPR green) */
+  --ifm-color-primary: #237631;
+  --ifm-color-primary-dark: #1f6a2b;
+  --ifm-color-primary-darker: #1c6027;
+  --ifm-color-primary-darkest: #154a1e;
+  --ifm-color-primary-light: #278838;
+  --ifm-color-primary-lighter: #2a9040;
+  --ifm-color-primary-lightest: #32ab4c;
+
+  --ifm-color-danger: #d61927;
+
+  /* Premium Design Tokens */
+  --ifpr-mesh-1: rgba(35, 118, 49, 0.15);
+  --ifpr-mesh-2: rgba(21, 128, 61, 0.12);
+  --ifpr-mesh-3: rgba(22, 163, 74, 0.18);
+  
+  --ifpr-surface-glass: rgba(255, 255, 255, 0.72);
+  --ifpr-surface-glass-border: rgba(255, 255, 255, 0.4);
+  --ifpr-glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  
+  --ifpr-shadow-float: 0 12px 40px rgba(0, 0, 0, 0.12);
+  --ifpr-shadow-colored: 0 4px 14px rgba(35, 118, 49, 0.28);
+
+  /* Schedule grid tokens */
+  --text-link: #237631;
+  --text-link-hover: #134700;
+  --text-interval: #666666;
+  --text-cell: #2d3133;
+  --text-cell-light: #d9d9d9;
+  --border-cell: #ffffff;
+  --border-grid: #d9d9d9;
+  --border-empty-box: #b8b8b8;
+  --background-cell: #d9d9d9;
+  --shadow: #00000080;
+  --slider-track: #0000007a;
+
+  --font-size-base: 16;
+}
+
+/* ── Dark Theme Variables ─────────────────── */
+[data-theme="dark"] {
+  --ifpr-mesh-1: rgba(50, 171, 76, 0.08);
+  --ifpr-mesh-2: rgba(35, 118, 49, 0.05);
+  --ifpr-mesh-3: rgba(39, 136, 57, 0.1);
+
+  --ifpr-surface-glass: rgba(28, 30, 33, 0.72);
+  --ifpr-surface-glass-border: rgba(255, 255, 255, 0.08);
+  --ifpr-glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  --border-cell: #1c1e21;
+  --border-grid: #3b4042;
+  --border-empty-box: #353a3c;
+  --background-cell: #2d3133;
+  --text-cell: #d9d9d9;
+  --text-cell-light: #d9d9d9;
+
+  --ifpr-shadow-colored: 0 4px 14px rgba(50, 171, 76, 0.18);
+}
+
+/* ── Global Animations ────────────────────── */
+@keyframes meshMove {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(2%, 4%) scale(1.05); }
+  66% { transform: translate(-1%, 2%) scale(0.98); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes fadeInPremium {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Base Body ────────────────────────────── */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", sans-serif;
+  height: auto !important;
+  overflow-x: hidden !important;
+}
+
+/* ── Scrollbar ────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-primary-lighter);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-color-primary);
+}
+
+/* ── Navbar ───────────────────────────────── */
+.navbar {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Container ────────────────────────────── */
+.container {
+  height: 100%;
+}
+
+/* ── Links ────────────────────────────────── */
+a {
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+/* ── Buttons ──────────────────────────────── */
+.button--primary {
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+.button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ifpr-shadow-colored) !important;
+}
+
+.button--primary:active {
+  transform: translateY(0);
+}
+
+/* ── Print — exportação da grade ──────────── */
+@media print {
+  * {
+    box-shadow: none;
+  }
+
+  body {
+    margin: 0px;
+    padding: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+  }
+}

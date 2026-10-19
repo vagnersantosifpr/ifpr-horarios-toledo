@@ -1,0 +1,251 @@
+---
+sidebar_label: 'Jael dos Santos'
+---
+
+import { Grid } from "@site/src/components/Grid";
+import BrowserOnly from "@docusaurus/BrowserOnly";
+
+export const data = {
+  "title": "Jael dos Santos",
+  "base": "",
+  "weekClasses": [
+    {
+      "dayName": "Segunda-Feira",
+      "dayClasses": []
+    },
+    {
+      "dayName": "Terça-Feira",
+      "dayClasses": [
+        {
+          "subject": "História I - 2573",
+          "size": 1,
+          "teachers": [
+            "Jael dos Santos"
+          ],
+          "classroom": "sala_03_-_cr_toledo",
+          "students": [
+            "IIW2026B"
+          ],
+          "time": "11:05 - 11:55",
+          "color": ""
+        },
+        {
+          "subject": "História II - 2569",
+          "size": 2,
+          "teachers": [
+            "Jael dos Santos"
+          ],
+          "classroom": "sala_01_-_cr_toledo",
+          "students": [
+            "IIW2025B"
+          ],
+          "time": "13:10 - 14:00",
+          "color": ""
+        },
+        {
+          "subject": "História III - 2551",
+          "size": 2,
+          "teachers": [
+            "Jael dos Santos"
+          ],
+          "classroom": "sala_02_-_cr_toledo",
+          "students": [
+            "IIW2024B"
+          ],
+          "time": "15:05 - 15:55",
+          "color": ""
+        }
+      ]
+    },
+    {
+      "dayName": "Quarta-Feira",
+      "dayClasses": [
+        {
+          "subject": "História II - 1234",
+          "size": 1,
+          "teachers": [
+            "Jael dos Santos"
+          ],
+          "classroom": "sala_9-2",
+          "students": [
+            "IIW2025A"
+          ],
+          "time": "09:25 - 10:15",
+          "color": ""
+        }
+      ]
+    },
+    {
+      "dayName": "Quinta-Feira",
+      "dayClasses": [
+        {
+          "subject": "História I - 1224",
+          "size": 1,
+          "teachers": [
+            "Jael dos Santos"
+          ],
+          "classroom": "sala_16-2",
+          "students": [
+            "IIW2026A"
+          ],
+          "time": "09:25 - 10:15",
+          "color": ""
+        },
+        {
+          "subject": "História II - 1234",
+          "size": 1,
+          "teachers": [
+            "Jael dos Santos"
+          ],
+          "classroom": "sala_9-2",
+          "students": [
+            "IIW2025A"
+          ],
+          "time": "11:05 - 11:55",
+          "color": ""
+        }
+      ]
+    },
+    {
+      "dayName": "Sexta-Feira",
+      "dayClasses": []
+    }
+  ],
+  "atendimentos": [],
+  "teacherInfo": {
+    "role": "Professor(a)",
+    "notes": "jael.dossantos@ifpr.edu.br"
+  },
+  "time": [
+    {
+      "time": "07:30 - 08:20",
+      "size": 50
+    },
+    {
+      "time": "08:20 - 09:10",
+      "size": 50
+    },
+    {
+      "time": "09:25 - 10:15",
+      "size": 50
+    },
+    {
+      "time": "10:15 - 11:05",
+      "size": 50
+    },
+    {
+      "time": "11:05 - 11:55",
+      "size": 50
+    },
+    {
+      "time": "13:10 - 14:00",
+      "size": 50
+    },
+    {
+      "time": "14:00 - 14:50",
+      "size": 50
+    },
+    {
+      "time": "15:05 - 15:55",
+      "size": 50
+    },
+    {
+      "time": "15:55 - 16:45",
+      "size": 50
+    },
+    {
+      "time": "16:45 - 17:35",
+      "size": 50
+    },
+    {
+      "time": "17:35 - 19:00",
+      "size": 50
+    },
+    {
+      "time": "19:00 - 19:50",
+      "size": 50
+    },
+    {
+      "time": "19:50 - 20:40",
+      "size": 50
+    },
+    {
+      "time": "21:00 - 21:50",
+      "size": 50
+    },
+    {
+      "time": "21:50 - 22:40",
+      "size": 50
+    }
+  ]
+}
+
+# {data.title}
+
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', marginBottom: '30px' }}>
+  
+  {/* Card de Atendimento ao Aluno */}
+  <div style={{
+    padding: '20px',
+    borderRadius: '16px',
+    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    color: 'white',
+    boxShadow: '0 10px 20px rgba(0,0,0,0.1)',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '12px'
+  }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+      <span style={{ fontSize: '24px' }}>👨‍🏫</span>
+      <h3 style={{ margin: 0, color: 'white', fontSize: '1.25rem' }}>Atendimento ao Aluno</h3>
+    </div>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+      {data.atendimentos && data.atendimentos.length > 0 ? (
+        data.atendimentos.map((item, idx) => (
+          <div key={idx} style={{ background: 'rgba(255,255,255,0.1)', padding: '8px 12px', borderRadius: '8px', display: 'flex', justifyContent: 'space-between' }}>
+            <span style={{ fontWeight: '600' }}>{item.dia}</span>
+            <span>{item.horarios}</span>
+          </div>
+        ))
+      ) : (
+        <div style={{ background: 'rgba(255,255,255,0.1)', padding: '12px', borderRadius: '8px', fontSize: '0.9rem' }}>
+          <p style={{ margin: '0 0 8px 0' }}>Esta informação deverá ser consultada na página específica.</p>
+          <a href="https://ifpr.edu.br/assis-chateaubriand/menu-academico/area-do-estudante/vida-academica/atendimento-ao-estudante/" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'underline', fontWeight: 'bold' }}>
+            🔗 Página de Atendimento ao Estudante
+          </a>
+          <p style={{ margin: '8px 0 0 0' }}>Não havendo a informação, o estudante deverá contactar o/a docente.</p>
+        </div>
+      )}
+    </div>
+  </div>
+
+  <div style={{
+    padding: '20px',
+    borderRadius: '16px',
+    background: 'white',
+    border: '1px solid #e2e8f0',
+    boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '12px'
+  }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+      <span style={{ fontSize: '24px' }}>ℹ️</span>
+      <h3 style={{ margin: 0, color: '#1a202c', fontSize: '1.25rem' }}>Informações</h3>
+    </div>
+    <div style={{ fontSize: '0.9rem', color: '#4a5568' }}>
+      <p><strong>Cargo:</strong> {data.teacherInfo?.role || "Professor"}</p>
+      {data.teacherInfo?.notes && <p><strong>Obs:</strong> {data.teacherInfo.notes}</p>}
+    </div>
+  </div>
+</div>
+
+<BrowserOnly>
+  {() => (
+    <Grid
+      title={data.title}
+      weekClasses={data.weekClasses}
+      time={data.time}
+    />
+  )}
+</BrowserOnly>
