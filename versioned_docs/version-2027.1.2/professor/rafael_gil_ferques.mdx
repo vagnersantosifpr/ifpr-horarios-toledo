@@ -1,0 +1,178 @@
+---
+sidebar_label: 'Rafael Gil Ferques'
+---
+    
+import { Grid } from "@site/src/components/Grid";
+import BrowserOnly from "@docusaurus/BrowserOnly";
+
+export const data = {
+  "title": "Rafael Gil Ferques",
+  "base": "",
+  "weekClasses": [
+    {
+      "dayName": "Segunda-Feira",
+      "dayClasses": [
+        {
+          "subject": "Serviços em nuvem - 2543",
+          "size": 2,
+          "teachers": [
+            "Rafael Gil Ferques"
+          ],
+          "classroom": "sala_01_-_cr_toledo",
+          "students": [
+            "IIW2025B"
+          ],
+          "time": "07:30 - 08:20",
+          "color": ""
+        },
+        {
+          "subject": "Desenvolvimento WEB Orientado a Objetos - 2538",
+          "size": 2,
+          "teachers": [
+            "Rafael Gil Ferques"
+          ],
+          "classroom": "sala_03_-_cr_toledo",
+          "students": [
+            "IIW2026B"
+          ],
+          "time": "09:25 - 10:15",
+          "color": ""
+        },
+        {
+          "subject": "Sistemas Gerenciadores de Conteúdo WEB - 2545",
+          "size": 2,
+          "teachers": [
+            "Rafael Gil Ferques"
+          ],
+          "classroom": "sala_01_-_cr_toledo",
+          "students": [
+            "IIW2025B"
+          ],
+          "time": "15:05 - 15:55",
+          "color": ""
+        }
+      ]
+    },
+    {
+      "dayName": "Terça-Feira",
+      "dayClasses": []
+    },
+    {
+      "dayName": "Quarta-Feira",
+      "dayClasses": [
+        {
+          "subject": "Projeto Integrador I - 2574",
+          "size": 2,
+          "teachers": [
+            "Rafael Gil Ferques"
+          ],
+          "classroom": "",
+          "students": [
+            "IIW2027A"
+          ],
+          "time": "07:30 - 08:20",
+          "color": ""
+        },
+        {
+          "subject": "Projeto Integrador I - 2574",
+          "size": 2,
+          "teachers": [
+            "Rafael Gil Ferques"
+          ],
+          "classroom": "",
+          "students": [
+            "IIW2027B"
+          ],
+          "time": "10:15 - 11:05",
+          "color": ""
+        }
+      ]
+    },
+    {
+      "dayName": "Quinta-Feira",
+      "dayClasses": []
+    },
+    {
+      "dayName": "Sexta-Feira",
+      "dayClasses": []
+    }
+  ],
+  "time": [
+    {
+      "time": "07:30 - 08:20",
+      "size": 50
+    },
+    {
+      "time": "08:20 - 09:10",
+      "size": 50
+    },
+    {
+      "time": "09:25 - 10:15",
+      "size": 50
+    },
+    {
+      "time": "10:15 - 11:05",
+      "size": 50
+    },
+    {
+      "time": "11:05 - 11:55",
+      "size": 50
+    },
+    {
+      "time": "13:10 - 14:00",
+      "size": 50
+    },
+    {
+      "time": "14:00 - 14:50",
+      "size": 50
+    },
+    {
+      "time": "15:05 - 15:55",
+      "size": 50
+    },
+    {
+      "time": "15:55 - 16:45",
+      "size": 50
+    },
+    {
+      "time": "16:45 - 17:35",
+      "size": 50
+    },
+    {
+      "time": "17:35 - 19:00",
+      "size": 50
+    },
+    {
+      "time": "19:00 - 19:50",
+      "size": 50
+    },
+    {
+      "time": "19:50 - 20:40",
+      "size": 50
+    },
+    {
+      "time": "21:00 - 21:50",
+      "size": 50
+    },
+    {
+      "time": "21:50 - 22:40",
+      "size": 50
+    }
+  ]
+}
+
+# Rafael Gil Ferques
+
+<div>
+  {
+    <BrowserOnly>
+      {() => (
+        <Grid
+          title={data.title}
+          weekClasses={data.weekClasses}
+          time={data.time}
+        />
+      )}
+    </BrowserOnly>
+  }
+</div>

@@ -1,0 +1,193 @@
+---
+sidebar_label: 'Adiel Felipe Felisberto da Silva'
+---
+    
+import { Grid } from "@site/src/components/Grid";
+import BrowserOnly from "@docusaurus/BrowserOnly";
+
+export const data = {
+  "title": "Adiel Felipe Felisberto da Silva",
+  "base": "",
+  "weekClasses": [
+    {
+      "dayName": "Segunda-Feira",
+      "dayClasses": [
+        {
+          "subject": "Sociologia I - 2560",
+          "size": 2,
+          "teachers": [
+            "Adiel Felipe Felisberto da Silva"
+          ],
+          "classroom": "",
+          "students": [
+            "IIW2027A"
+          ],
+          "time": "10:15 - 11:05",
+          "color": ""
+        }
+      ]
+    },
+    {
+      "dayName": "Terça-Feira",
+      "dayClasses": [
+        {
+          "subject": "Filosofia I - 2541",
+          "size": 2,
+          "teachers": [
+            "Adiel Felipe Felisberto da Silva"
+          ],
+          "classroom": "",
+          "students": [
+            "IIW2027A"
+          ],
+          "time": "07:30 - 08:20",
+          "color": ""
+        },
+        {
+          "subject": "Filosofia I - 2541",
+          "size": 2,
+          "teachers": [
+            "Adiel Felipe Felisberto da Silva"
+          ],
+          "classroom": "",
+          "students": [
+            "IIW2027B"
+          ],
+          "time": "10:15 - 11:05",
+          "color": ""
+        }
+      ]
+    },
+    {
+      "dayName": "Quarta-Feira",
+      "dayClasses": []
+    },
+    {
+      "dayName": "Quinta-Feira",
+      "dayClasses": [
+        {
+          "subject": "Filosofia III - 2548",
+          "size": 2,
+          "teachers": [
+            "Adiel Felipe Felisberto da Silva"
+          ],
+          "classroom": "sala_01_-_cr_toledo",
+          "students": [
+            "IIW2025B"
+          ],
+          "time": "07:30 - 08:20",
+          "color": ""
+        },
+        {
+          "subject": "Sociologia II - 2553",
+          "size": 2,
+          "teachers": [
+            "Adiel Felipe Felisberto da Silva"
+          ],
+          "classroom": "sala_01_-_cr_toledo",
+          "students": [
+            "IIW2025B"
+          ],
+          "time": "09:25 - 10:15",
+          "color": ""
+        }
+      ]
+    },
+    {
+      "dayName": "Sexta-Feira",
+      "dayClasses": [
+        {
+          "subject": "Filosofia II - 2542",
+          "size": 1,
+          "teachers": [
+            "Adiel Felipe Felisberto da Silva"
+          ],
+          "classroom": "sala_03_-_cr_toledo",
+          "students": [
+            "IIW2026B"
+          ],
+          "time": "09:25 - 10:15",
+          "color": ""
+        }
+      ]
+    }
+  ],
+  "time": [
+    {
+      "time": "07:30 - 08:20",
+      "size": 50
+    },
+    {
+      "time": "08:20 - 09:10",
+      "size": 50
+    },
+    {
+      "time": "09:25 - 10:15",
+      "size": 50
+    },
+    {
+      "time": "10:15 - 11:05",
+      "size": 50
+    },
+    {
+      "time": "11:05 - 11:55",
+      "size": 50
+    },
+    {
+      "time": "13:10 - 14:00",
+      "size": 50
+    },
+    {
+      "time": "14:00 - 14:50",
+      "size": 50
+    },
+    {
+      "time": "15:05 - 15:55",
+      "size": 50
+    },
+    {
+      "time": "15:55 - 16:45",
+      "size": 50
+    },
+    {
+      "time": "16:45 - 17:35",
+      "size": 50
+    },
+    {
+      "time": "17:35 - 19:00",
+      "size": 50
+    },
+    {
+      "time": "19:00 - 19:50",
+      "size": 50
+    },
+    {
+      "time": "19:50 - 20:40",
+      "size": 50
+    },
+    {
+      "time": "21:00 - 21:50",
+      "size": 50
+    },
+    {
+      "time": "21:50 - 22:40",
+      "size": 50
+    }
+  ]
+}
+
+# Adiel Felipe Felisberto da Silva
+
+<div>
+  {
+    <BrowserOnly>
+      {() => (
+        <Grid
+          title={data.title}
+          weekClasses={data.weekClasses}
+          time={data.time}
+        />
+      )}
+    </BrowserOnly>
+  }
+</div>
